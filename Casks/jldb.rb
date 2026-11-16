@@ -9,14 +9,15 @@ cask "jldb" do
   homepage "https://github.com/jonathanleivag/jldb-releases"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "JLDB.app"
 
   # The app is not signed with an Apple Developer ID, so Gatekeeper would block it on first launch.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/JLDB.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "/Applications/JLDB.app"],
+        must_succeed: false
   end
 
   zap trash: [
