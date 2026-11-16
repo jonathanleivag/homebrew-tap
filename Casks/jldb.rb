@@ -1,8 +1,8 @@
 # Copy this file to Casks/jldb.rb in the jonathanleivag/homebrew-tap repository.
 # Update `version` and `sha256` on every release: shasum -a 256 release/JLDB-<version>-arm64.dmg
 cask "jldb" do
-  version "0.2.3"
-  sha256 "3dcb3d4fc6dd333fa191d73842cfb477b7347e726263a8963b2a82b898452a0a"
+  version "0.2.4"
+  sha256 "40c88b48cb86f4fe1ea028e0c465363c873b4b93618285d7b393e0f63712108d"
 
   # The source lives in a private repository; installers are published from this public one.
   url "https://github.com/jonathanleivag/jldb-releases/releases/download/v#{version}/JLDB-#{version}-arm64.dmg"
