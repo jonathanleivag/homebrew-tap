@@ -1,6 +1,6 @@
 cask "jldb" do
-  version "0.2.20"
-  sha256 "85b6925ac5d54e3ac97f4f4461e0cba53c55bab1ea8e3df9a7b871a26ebda624"
+  version "0.2.21"
+  sha256 "488339c1bbbb08d92fa74f1f91a2c7119c32e04160e27b5e1a2995a9d530d842"
 
   # The source lives in a private repository; installers are published from this public one.
   url "https://github.com/jonathanleivag/jldb-releases/releases/download/v#{version}/JLDB-#{version}-arm64.dmg"
